@@ -1,0 +1,24 @@
+[project]
+name = "social-network"
+version = "0.0.1"
+description = "Социальная сеть - Курс Otus"
+requires-python = ">=3.12"
+readme = "README.md"
+
+dependencies = [
+    "fastapi==0.163.1",
+    "psycopg2==2.9.13",
+    "passlib==1.7.4",
+    "python-jose==3.5.0",
+    "uvicorn==0.54.0",
+    "pydantic-settings==2.16.3"
+]
+
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
