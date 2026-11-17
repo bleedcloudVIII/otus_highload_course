@@ -37,17 +37,57 @@
     },
     {
       "name": "get user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"first_name\": \"Юрий\",\n    \"second_name\": \"Карась\",\n    \"birthdate\": \"2003-11-01\",\n    \"biography\": \"Какая-то биография\",\n    \"city\": \"Свободный\",\n    \"password\": \"q4z4732S\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/user/get/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "user",
+            "get",
+            "1"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "user login",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1,\n    \"password\": \"q4z4732S\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "login"
+          ]
+        }
       },
       "response": []
     }
