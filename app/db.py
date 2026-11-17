@@ -1,4 +1,3 @@
-import os
 from psycopg2 import pool
 from app.settings import settings
 
