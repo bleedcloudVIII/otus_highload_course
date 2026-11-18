@@ -7,7 +7,7 @@ class UserRegister(BaseModel):
     second_name: str
     birthdate: date
     biography: str | None = None
-    city: str
+    city: str | None = None
     password: str
 
 
@@ -17,4 +17,4 @@ class UserOut(BaseModel):
     second_name: str
     birthdate: date
     biography: str | None
-    city: str
+    city: str | None
