@@ -5,7 +5,7 @@ from pydantic import BaseModel
 class UserRegister(BaseModel):
     first_name: str
     second_name: str
-    birthdate: str
+    birthdate: date
     biography: str | None = None
     city: str
     password: str
@@ -16,5 +16,5 @@ class UserOut(BaseModel):
     first_name: str
     second_name: str
     birthdate: date | None
-    biography: str
+    biography: str | None
     city: str
