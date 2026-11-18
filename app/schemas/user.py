@@ -15,6 +15,6 @@ class UserOut(BaseModel):
     id: int
     first_name: str
     second_name: str
-    birthdate: date | None
+    birthdate: date
     biography: str | None
     city: str
